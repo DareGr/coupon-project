@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use App\Models\CouponPattern;
+
+class CouponType extends Model
+{
+    use HasFactory;
+    public $timestamps = false;
+    protected $guarded = []; 
+
+    public function coupons()
+    {
+        return $this->belongsTo(Coupon::class);
+    }
+}
